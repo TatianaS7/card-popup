@@ -1,7 +1,11 @@
 body {
     color: white;
-    /* display: flex;
-    justify-content: center; */
+    height: 100vh;
+    overflow: hidden;
+}
+
+#device-requirements {
+    display: none;
 }
 
 #refresh {
@@ -10,9 +14,12 @@ body {
 }
 
 #refresh-button {
+    display: none;
+}
+
+#refresh-button.open {
     display: flex;
     justify-content: center;
-    position: relative;
 }
 
 #envelope-container {
@@ -29,7 +36,6 @@ body {
     background-color: rgb(233, 218, 199);
     margin: 30px 30px 25px 30px;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
-    /* overflow: hidden; */
     transition: transform 1s;
 }
 
@@ -40,8 +46,8 @@ body {
     left: 50%;
     width: 0;
     height: 0;
-    border-left: 380px solid transparent; /* Adjust to control the width of the triangle */
-    border-right: 380px solid transparent; /* Same as border-left */
+    border-left: 29vw solid transparent; /* Adjust to control the width of the triangle */
+    border-right: 29vw solid transparent; /* Same as border-left */
     border-top: 250px solid antiquewhite; /* Adjust the height of the triangle */
     transform-origin: center top;
     transform: translateX(-50%);
@@ -59,6 +65,7 @@ body {
     min-width: 65%;
     border-style: none;
     background-color: transparent;
+
 }
 
 #card {
@@ -66,12 +73,11 @@ display: none;
 }
 
 #card.open {
-    padding: 20px;
-    width: 100%;
     height: 90%;
+    width: 60%; 
+    margin-left: 2.5in;
     display: flex;
-    flex: 1;
-    justify-content: space-evenly;
+    justify-content: center;
     scale: 1.7;
     background-color: whitesmoke; /*Changes color of card*/
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
@@ -80,48 +86,90 @@ display: none;
 #left-side {
     display: flex;
     border-right-style: solid;
-    /* padding-right: 50px; */
-    border-right-color: rgba(0, 0, 0, 0.039);
+    border-right-color: rgba(174, 172, 172, 0.128);
+    max-width: 50%;
+    max-height: 100%;
 }
 
 #right-side {
     display: flex;
+    max-width: 50%;
+    padding: 20px;
 }
 
 
 #message {
     display: none;
-    border-style: solid;
     max-height: 100%;
+    max-width: 100%;
+    padding: 5px;
+    /* border-style: solid; */
 }
 
-#message p {
-    border-style: dotted;
+#personal-message {
     font-size: large;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #heading {
     font-weight: bolder;
-    font-size: larger;
-    color: blue;
+    font-size: xx-large;
+    text-transform: uppercase;
+    margin-top: 10px;
 }
 
 #signature {
-    position: static;
     display: flex;
     float: right;
+    margin-top: 70px;
+    margin-left: 5px;
 }
 
 #images {
     display: none;
-    border-style: solid;
     width: 100%;
+    /* border-style: solid; */
 }
 
 #images img {
     max-width: 100%;
     max-height: 200px;
-    border-style: dotted;
-    border-color: red;
 }
+#candles {
+    margin-top: 49px;
+    width: 100%;
+}
+
+#confetti {
+    width: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+        background-color: black;
+        color: white;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    #envelope {
+        display: none;
+    }
+
+    #device-requirements {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 50px;
+        color: white;
+        background-color: black;
+        font-weight: 700;
+        height: 100vw;
+        font-size: 30px;
+    }
+
+}
+
+
 
